@@ -1,0 +1,23 @@
+[project]
+name = "python-lab"
+version = "0.1.0"
+description = "Test various Python functions and use-cases"
+authors = [
+    {name = "Sindre Bergsvik Øvstegård",email = "sbo@eidel.no"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [
+    {include = "quartus", from = "src"},
+    {include = "case", from = "src"},
+    {include = "intEnum", from = "src"},
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
