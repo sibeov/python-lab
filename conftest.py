@@ -8,7 +8,6 @@ Author: DE/sbo
 # External
 import sys
 import logging
-from anyio import Path
 import pytest
 
 
