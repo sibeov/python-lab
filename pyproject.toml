@@ -11,7 +11,9 @@ dependencies = [
     "pytest (>=8.3.5,<9.0.0)",
     "pytest-asyncio (>=0.26.0,<0.27.0)",
     "pytest-html (>=4.1.1,<5.0.0)",
-    "construct (>=2.10.70,<3.0.0)"
+    "construct (>=2.10.70,<3.0.0)",
+    "cocotb (>=1.9.2,<2.0.0)",
+    "pyuvm (>=3.0.0,<4.0.0)"
 ]
 
 [tool.poetry]
@@ -25,3 +27,20 @@ packages = [
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 130
+target-version = ["py313"]
+skip-string-normalization = false
+
+[tool.pyright]
+typeCheckingMode = "off"
+reportMissingImports = false
+reportMissingTypeStubs = false
+reportUnusedVariable = true
+exclude = ["build", "dist"]
+include = ["pyuvm", "src"]
+
+[tool.mypy]
+ignore_missing_imports = true
+ignore_errors = true
