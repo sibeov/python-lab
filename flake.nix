@@ -52,7 +52,7 @@
               # lapack
 
               # # For pygobject, matplotlib
-              # pkg-config
+              pkg-config
               gtk3
               gobject-introspection
               cairo

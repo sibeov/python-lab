@@ -1,32 +1,37 @@
+[build-system]
+requires = ["setuptools >= 80.9.0", "wheel", "uv"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "python-lab"
 version = "0.1.0"
 description = "Test various Python functions and use-cases"
-authors = [
-    {name = "Sindre Bergsvik Øvstegård",email = "sbo@eidel.no"}
-]
+authors = [{ name = "sibeov", email = "sbo@eidel.no" }]
 readme = "README.md"
 requires-python = ">=3.12"
+classifiers = [
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3.12",
+	"Programming Language :: Python :: 3.13",
+	"Programming Language :: Python :: 3.14",
+]
 dependencies = [
-    "pytest (>=8.3.5,<9.0.0)",
-    "pytest-asyncio (>=0.26.0,<0.27.0)",
-    "pytest-html (>=4.1.1,<5.0.0)",
-    "construct (>=2.10.70,<3.0.0)",
-    "cocotb (>=1.9.2,<2.0.0)",
-    "pyuvm (>=3.0.0,<4.0.0)"
+	# Scientific
+	"numpy>=2.3.4",
+	"scipy>=1.16.2",
+	# Plotting
+	"matplotlib>=3.10.7",
+	"bokeh>=3.8.0",
+	"pygobject>=3.54.3",
+	# Testing
+	"pytest (>=8.4.2,<9.0.0)",
+	"pytest-asyncio (>=0.26.0,<0.27.0)",
+	"pytest-html (>=4.1.1,<5.0.0)",
+	"construct (>=2.10.70,<3.0.0)",
+	# FPGA
+	"cocotb >=2.0.0",
+	"pyuvm >=4.0.1",
 ]
-
-[tool.poetry]
-packages = [
-    {include = "quartus", from = "src"},
-    {include = "case", from = "src"},
-    {include = "intEnum", from = "src"},
-]
-
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 130
