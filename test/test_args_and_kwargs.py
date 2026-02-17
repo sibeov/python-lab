@@ -1,5 +1,5 @@
 """
-Author : DE/sbo
+Author : sibeov
 E-mail : sbo@eidel.no
 """
 

@@ -8,10 +8,9 @@ version = "0.1.0"
 description = "Test various Python functions and use-cases"
 authors = [{ name = "sibeov", email = "sbo@eidel.no" }]
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.13"
 classifiers = [
 	"Programming Language :: Python",
-	"Programming Language :: Python :: 3.12",
 	"Programming Language :: Python :: 3.13",
 	"Programming Language :: Python :: 3.14",
 ]
@@ -19,6 +18,7 @@ dependencies = [
 	# Scientific
 	"numpy>=2.3.4",
 	"scipy>=1.16.2",
+	"ipython",
 	# Plotting
 	"matplotlib>=3.10.7",
 	"bokeh>=3.8.0",
