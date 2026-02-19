@@ -51,3 +51,10 @@ include = ["pyuvm", "src"]
 [tool.mypy]
 ignore_missing_imports = true
 ignore_errors = true
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v${version}"
+version_scheme = "semver2"
+version = "0.0.2"
+update_changelog_on_bump = true
